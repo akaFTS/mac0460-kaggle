@@ -17,8 +17,8 @@ print('CUDA available? %s' % torch.cuda.is_available())
 
 train_X = np.load('train_data.npy') / 255
 train_y = np.load('train_labels.npy')
-valid1_X = np.load('valid_data1.npy') [0:2000] / 255
-valid1_y = np.load('valid_labels1.npy') [0:2000]
+valid1_X = np.load('valid_data1.npy') / 255
+valid1_y = np.load('valid_labels1.npy')
 valid2_X = np.load('valid_data2.npy') / 255
 valid2_y = np.load('valid_labels2.npy')
 test_X = np.load('test_track_data.npy') / 255
@@ -129,8 +129,8 @@ class LRConfig(object):
 # set hyperparams
 
 lr_config = LRConfig()
-lr_config.epochs = 60
-lr_config.learning_rate = 0.06
+lr_config.epochs = 10
+lr_config.learning_rate = 0.01
 lr_config.momentum = 0.1
 lr_config.architecture = [100, 3]
 lr_config.weight_decay = 0.001
