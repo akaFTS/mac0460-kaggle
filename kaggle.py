@@ -129,11 +129,11 @@ class LRConfig(object):
 # set hyperparams
 
 lr_config = LRConfig()
-lr_config.epochs = 10
+lr_config.epochs = 15
 lr_config.learning_rate = 0.01
 lr_config.momentum = 0.1
-lr_config.architecture = [100, 3]
-lr_config.weight_decay = 0.001
+lr_config.architecture = [500, 100, 3]
+lr_config.weight_decay = 0.0001
 print("Os hiper parametros do modelo de regressao logistica sao:\n")
 print(lr_config)
 
@@ -282,6 +282,7 @@ class CNN(nn.Module):
         for i in range(self.num_conv):
             conv = getattr(self, "conv"+str(i))
             inn = conv(inn)
+            inn = F.relu(inn)
             pool = getattr(self, "pool"+str(i))
             inn = pool(inn)
             
