@@ -222,6 +222,7 @@ def train_model_img_classification(model,
             #     v_loss = criterion(v_pred, v_labels)
             #     valid_loss.append(float(v_loss))
 
+        (v_images, v_labels) = next(iter(valid_loader))
         v_candidates = model.predict(v_images)
         acc = v_candidates.eq(v_labels).sum()
         print("End of epoch %d | Validation loss: %.3f | Accuracy: %d / %d" % (epoch, float(v_loss), acc, len(v_labels)))
