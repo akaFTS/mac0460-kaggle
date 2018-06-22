@@ -4,15 +4,16 @@ import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
-from plots import plot9images, plot_confusion_matrix, plot_histogram_from_labels
+#from plots import plot9images, plot_confusion_matrix, plot_histogram_from_labels
 from torch.utils.data import TensorDataset
 from torch.utils.data import DataLoader
 
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 print("PyTorch version = {} ".format(torch.__version__))
 
+print('CUDA available? %s' % torch.cuda.is_available())
 
 train_X = np.load('train_data.npy') / 255
 train_y = np.load('train_labels.npy')
@@ -133,7 +134,7 @@ lr_config.learning_rate = 0.06
 lr_config.momentum = 0.1
 lr_config.architecture = [100, 3]
 lr_config.weight_decay = 0.001
-print("Os hiper parâmetros do modelo de regressão logística são:\n")
+print("Os hiper parametros do modelo de regressao logistica sao:\n")
 print(lr_config)
 
 
@@ -223,16 +224,16 @@ def train_model_img_classification(model,
         acc = v_candidates.eq(v_labels).sum()
                         
     # Plot
-    x = np.arange(1, len(train_loss) + 1, 1)
-    _, ax = plt.subplots(1, 1, figsize=(12, 5))
-    ax.plot(x, train_loss, label='train loss')
-    ax.plot(x, valid_loss, label='valid loss')
-    ax.legend()
-    plt.xlabel('step')
-    plt.ylabel('loss')
-    plt.title('Train and valid loss')
-    plt.grid(True)
-    plt.show()
+ #   x = np.arange(1, len(train_loss) + 1, 1)
+ #   _, ax = plt.subplots(1, 1, figsize=(12, 5))
+ #   ax.plot(x, train_loss, label='train loss')
+ #   ax.plot(x, valid_loss, label='valid loss')
+ #   ax.legend()
+ #   plt.xlabel('step')
+ #   plt.ylabel('loss')
+ #   plt.title('Train and valid loss')
+ #   plt.grid(True)
+ #   plt.show()
         
 
 
@@ -323,11 +324,11 @@ train_model_img_classification(model,
 img, labels = next(iter(self_driving_data.test_loader))
 pred = model.predict(img).numpy()
 
-plot_confusion_matrix(truth=labels.numpy(),
-                      predictions=pred,
-                      save=False,
-                      path="dfn_confusion_matrix.png",
-                      classes=["forward", "left", "right"])
+#plot_confusion_matrix(truth=labels.numpy(),
+#                      predictions=pred,
+#                      save=False,
+#                      path="dfn_confusion_matrix.png",
+#                      classes=["forward", "left", "right"])
 
 
 # In[275]:
