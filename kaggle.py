@@ -23,6 +23,10 @@ valid2_X = np.load('valid_data2.npy') / 255
 valid2_y = np.load('valid_labels2.npy')
 test_X = np.load('test_track_data.npy') / 255
 
+# concat train and validation2
+train_X = np.concatenate((train_X, valid2_X), axis=0)
+train_y = np.concatenate((train_y, valid2_y), axis=0)
+
 valid1_X = valid1_X.reshape((-1, 3, 45, 80))
 valid2_X = valid2_X.reshape((-1, 3, 45, 80))
 test_X = test_X.reshape((-1, 3, 45, 80))
@@ -130,9 +134,9 @@ class LRConfig(object):
 
 lr_config = LRConfig()
 lr_config.epochs = 15
-lr_config.learning_rate = 0.01
+lr_config.learning_rate = 0.05
 lr_config.momentum = 0.1
-lr_config.architecture = [500, 100, 3]
+lr_config.architecture = [200, 50, 3]
 lr_config.weight_decay = 0.0001
 print("Os hiper parametros do modelo de regressao logistica sao:\n")
 print(lr_config)
