@@ -213,14 +213,14 @@ def train_model_img_classification(model,
             loss.backward()
             optimizer.step()
             
-            if step % config.save_step == 0:
-                train_loss.append(float(loss))
+            # if step % config.save_step == 0:
+            #     train_loss.append(float(loss))
             
-                # Test on validation data
-                (v_images, v_labels) = next(iter(valid_loader))
-                v_pred = model(v_images)
-                v_loss = criterion(v_pred, v_labels)
-                valid_loss.append(float(v_loss))
+            #     # Test on validation data
+            #     (v_images, v_labels) = next(iter(valid_loader))
+            #     v_pred = model(v_images)
+            #     v_loss = criterion(v_pred, v_labels)
+            #     valid_loss.append(float(v_loss))
 
         v_candidates = model.predict(v_images)
         acc = v_candidates.eq(v_labels).sum()
