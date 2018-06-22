@@ -133,10 +133,11 @@ class LRConfig(object):
 # set hyperparams
 
 lr_config = LRConfig()
-lr_config.epochs = 30
-lr_config.learning_rate = 0.03
+lr_config.epochs = 60
+lr_config.learning_rate = 0.01
 lr_config.momentum = 0.1
-lr_config.architecture = [500, 100, 3]
+lr_config.conv_architecture = [24, 16]
+lr_config.architecture = [800, 200, 3]
 lr_config.weight_decay = 0.0001
 print("Os hiper parametros do modelo de regressao logistica sao:\n")
 print(lr_config)
