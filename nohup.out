@@ -1,0 +1,10 @@
+PyTorch version = 0.4.0 
+CUDA available? True
+Traceback (most recent call last):
+  File "kaggle.py", line 18, in <module>
+    train_X = np.load('train_data.npy') / 255
+KeyboardInterrupt
+Exception ignored in: <function WeakValueDictionary.__init__.<locals>.remove at 0x7fc8314a6268>
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/weakref.py", line 117, in remove
+TypeError: 'NoneType' object is not callable
