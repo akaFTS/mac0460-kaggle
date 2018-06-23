@@ -8,3 +8,62 @@ Exception ignored in: <function WeakValueDictionary.__init__.<locals>.remove at 
 Traceback (most recent call last):
   File "/usr/lib/python3.5/weakref.py", line 117, in remove
 TypeError: 'NoneType' object is not callable
+PyTorch version = 0.4.0 
+CUDA available? True
+Os hiper parametros do modelo de regressao logistica sao:
+
+height = 45
+width = 80
+channels = 3
+classes = 3
+architecture = [800, 200, 3]
+conv_architecture = [12, 16]
+kernel_sizes = [5, 5]
+pool_kernel = [2, 2]
+batch_size = 32
+epochs = 40
+learning_rate = 0.03
+momentum = 0.01
+save_step = 100
+weight_decay = 0.0001
+
+End of epoch 0 | Validation loss: 0.526 | Accuracy: 5491 / 7022
+End of epoch 1 | Validation loss: 0.497 | Accuracy: 5525 / 7022
+End of epoch 2 | Validation loss: 0.487 | Accuracy: 5593 / 7022
+End of epoch 3 | Validation loss: 0.532 | Accuracy: 5396 / 7022
+End of epoch 4 | Validation loss: 0.487 | Accuracy: 5622 / 7022
+End of epoch 5 | Validation loss: 0.459 | Accuracy: 5673 / 7022
+End of epoch 6 | Validation loss: 0.500 | Accuracy: 5463 / 7022
+End of epoch 7 | Validation loss: 0.452 | Accuracy: 5679 / 7022
+End of epoch 8 | Validation loss: 0.469 | Accuracy: 5628 / 7022
+End of epoch 9 | Validation loss: 0.436 | Accuracy: 5754 / 7022
+End of epoch 10 | Validation loss: 0.445 | Accuracy: 5721 / 7022
+End of epoch 11 | Validation loss: 0.418 | Accuracy: 5798 / 7022
+End of epoch 12 | Validation loss: 0.444 | Accuracy: 5708 / 7022
+End of epoch 13 | Validation loss: 0.425 | Accuracy: 5771 / 7022
+End of epoch 14 | Validation loss: 0.419 | Accuracy: 5823 / 7022
+End of epoch 15 | Validation loss: 0.411 | Accuracy: 5809 / 7022
+End of epoch 16 | Validation loss: 0.415 | Accuracy: 5801 / 7022
+End of epoch 17 | Validation loss: 0.425 | Accuracy: 5761 / 7022
+End of epoch 18 | Validation loss: 0.415 | Accuracy: 5801 / 7022
+End of epoch 19 | Validation loss: 0.417 | Accuracy: 5814 / 7022
+End of epoch 20 | Validation loss: 0.446 | Accuracy: 5783 / 7022
+End of epoch 21 | Validation loss: 0.405 | Accuracy: 5838 / 7022
+End of epoch 22 | Validation loss: 0.410 | Accuracy: 5818 / 7022
+End of epoch 23 | Validation loss: 0.443 | Accuracy: 5651 / 7022
+End of epoch 24 | Validation loss: 0.390 | Accuracy: 5900 / 7022
+End of epoch 25 | Validation loss: 0.411 | Accuracy: 5765 / 7022
+End of epoch 26 | Validation loss: 0.418 | Accuracy: 5771 / 7022
+End of epoch 27 | Validation loss: 0.400 | Accuracy: 5887 / 7022
+End of epoch 28 | Validation loss: 0.420 | Accuracy: 5772 / 7022
+End of epoch 29 | Validation loss: 0.407 | Accuracy: 5813 / 7022
+End of epoch 30 | Validation loss: 0.428 | Accuracy: 5770 / 7022
+End of epoch 31 | Validation loss: 0.383 | Accuracy: 5899 / 7022
+End of epoch 32 | Validation loss: 0.426 | Accuracy: 5793 / 7022
+End of epoch 33 | Validation loss: 0.380 | Accuracy: 5917 / 7022
+End of epoch 34 | Validation loss: 0.386 | Accuracy: 5932 / 7022
+End of epoch 35 | Validation loss: 0.418 | Accuracy: 5797 / 7022
+End of epoch 36 | Validation loss: 0.378 | Accuracy: 5958 / 7022
+End of epoch 37 | Validation loss: 0.368 | Accuracy: 5985 / 7022
+End of epoch 38 | Validation loss: 0.390 | Accuracy: 5904 / 7022
+End of epoch 39 | Validation loss: 0.379 | Accuracy: 5917 / 7022
